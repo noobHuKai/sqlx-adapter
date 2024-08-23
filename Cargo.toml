@@ -10,7 +10,7 @@ readme= "README.md"
 
 [dependencies]
 casbin = { version = "2.1.0", default-features = false }
-sqlx = { version = "0.7", default-features = false, features = [ "macros" ] }
+sqlx = { version = "0.8.0", default-features = false, features = [ "macros" ] }
 async-trait = "0.1.51"
 dotenv = { version = "0.15.0", default-features = false }
 tokio = { version = "1.10.0", default-features = false, optional = true }
@@ -31,10 +31,11 @@ runtime-async-std-rustls = ["casbin/runtime-async-std", "sqlx/runtime-async-std-
 # tokio
 runtime-tokio-native-tls = ["casbin/runtime-tokio", "sqlx/runtime-tokio-native-tls"]
 runtime-tokio-rustls = ["casbin/runtime-tokio", "sqlx/runtime-tokio-rustls"]
+runtime-tokio = ["casbin/runtime-tokio", "sqlx/runtime-tokio"]
 
 [dev-dependencies]
 async-std = { version = "1.9.0", features = [ "attributes" ] }
-tokio = { version = "1.10.0", features = [ "full" ] }
+tokio = { version = "1.39.3", features = [ "full" ] }
 
 [profile.release]
 codegen-units = 1

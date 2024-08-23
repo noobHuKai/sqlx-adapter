@@ -283,7 +283,7 @@ mod tests {
         async_std::test
     )]
     #[cfg_attr(
-        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls"),
+        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls", feature = "runtime-tokio"),
         tokio::test(flavor = "multi_thread")
     )]
     async fn test_create() {
@@ -325,7 +325,7 @@ mod tests {
         async_std::test
     )]
     #[cfg_attr(
-        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls"),
+        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls", feature = "runtime-tokio"),
         tokio::test(flavor = "multi_thread")
     )]
     async fn test_create_with_pool() {
@@ -376,7 +376,7 @@ mod tests {
         async_std::test
     )]
     #[cfg_attr(
-        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls"),
+        any(feature = "runtime-tokio-native-tls", feature = "runtime-tokio-rustls", feature = "runtime-tokio"),
         tokio::test(flavor = "multi_thread")
     )]
     async fn test_adapter() {
